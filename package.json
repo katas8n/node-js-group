@@ -1,0 +1,19 @@
+{
+    "name": "app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start:client": "echo \"Error: no test specified\" && exit 1",
+        "start:services": "echo \"Error: no test specified\" && exit 1",
+        "start:profile-ms": "npm run start:profile --prefix services/profile",
+        "start:authorisation-ms": "npm run start:authorisation --prefix services/authorisation",
+        "start:all": "concurrently  \"npm run start:authorisation-ms\"  \"npm run start:profile-ms\" \"npm run dev --prefix client\""
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "concurrently": "^9.1.0"
+    }
+}
